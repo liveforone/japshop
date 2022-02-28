@@ -11,4 +11,13 @@ public class Address {
     private String city;
     private String street;
     private String zipcode;
+
+    protected Address() {
+    }  //함부로 생성하지 말자
+
+    public Address(String city, String street, String zipcode) {
+        this.city = city;
+        this.street = street;
+        this.zipcode = zipcode;
+    }
 }
