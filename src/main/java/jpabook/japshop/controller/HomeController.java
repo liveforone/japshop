@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Slf4j  //선언하면 바로 로그를 찍을 수 있음
 public class HomeController {
 
-    @RequestMapping("/")  //기본지정
+    @RequestMapping("/")
     public String home() {
         log.info("home controller");
         return "home";
