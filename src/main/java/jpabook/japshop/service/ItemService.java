@@ -22,11 +22,11 @@ public class ItemService {
     }
 
     @Transactional
-    public void updateItem(Long itemId, String name, int price, int stockQuantity) {  //변경감지 == dirty checking
+    public void updateItem(Long itemId, Book bookParam) {  //변경감지 == dirty checking
         Item findItem = itemRepository.findOne(itemId);
-        findItem.setPrice(price);
-        findItem.setName(name);
-        findItem.setStockQuantity(stockQuantity);
+        findItem.setPrice(bookParam.getPrice());
+        findItem.setName(bookParam.getName());
+        findItem.setStockQuantity(bookParam.getStockQuantity());
     }
 
     public List<Item> findItem() {  //전체 조회
